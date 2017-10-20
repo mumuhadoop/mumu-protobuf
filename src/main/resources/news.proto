@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.lovecws.mumu.protobuf.news;
+
+option java_package = "com.lovecws.mumu.protobuf.news";  //设置java对应的package
+option java_multiple_files = true;        //建议设置为true，这样会每个对象放在一个文件中，否则所有对象都在一个java文件中
+
+//用户信息
+message SinaFinanceNews {
+	string htitle = 1;
+	string keywords = 2;
+	string description = 3;
+	string url = 4;
+	string sumary = 5;
+	string content = 6;
+	string logo = 7;
+	string title = 8;
+ 	string pubDate = 9;
+ 	string mediaName = 10;
+ 	string mediaUrl = 11;
+ 	string category = 12;
+ 	string type = 13;
+}

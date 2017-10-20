@@ -1,0 +1,26 @@
+syntax = "proto3";
+package com.lovecws.mumu.protobuf.user;
+
+option java_package = "com.lovecws.mumu.protobuf.user";  //设置java对应的package
+option java_multiple_files = true;        //建议设置为true，这样会每个对象放在一个文件中，否则所有对象都在一个java文件中
+
+
+//类型
+enum SexType {
+	MALE = 0;          //男性
+	FEMALE = 1;        //女性
+	UNKNOW = 2;        //未知
+}
+
+//用户信息
+message AppUser {
+	int64 userId = 1;
+	string userName = 2;
+	string userPassword = 3;
+	SexType sexType = 4;
+	string userPhone = 5;
+	string userEmail = 6;
+	string userBirthday = 7;
+	int64 userArea = 8;
+ 	string sign = 9;
+}
